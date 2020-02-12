@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import ProfileImg from "../assets/profile_image_transparent.png"
 
 function Landing() {
     return (
@@ -18,7 +19,9 @@ function Landing() {
             <Row className="landing-bg">
                 <Col lg={10} md={12}className="landing-blue">
                 </Col>
-                <Col lg={2} className="landing-img"></Col>
+                <Col lg={2} className="landing-img-visibility">
+                    <img className="landing-img" src={ProfileImg} alt="My Face"/>
+                </Col>
             </Row>
             
         </React.Fragment>
