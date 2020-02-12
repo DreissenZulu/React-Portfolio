@@ -1,65 +1,69 @@
 body {
-  background-color: #dddddd;
+  background-color: #f9f9f9;
 }
 
-.App-header {
-  min-height: 15vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+h1 {
+  font-family: 'Open Sans';
+  font-weight: bolder;
+  font-size: 48pt;
+}
+
+h4 {
+  font-family: 'Roboto';
+  font-weight: lighter;
+  font-size: 28pt;
+}
+
+.landing-bg {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.landing-blue {
+  position: fixed;
+  top: -35vh;
+  left: -20vw;
+  height: 150vh;
+  width: 100%;
   color: white;
-  background-color: #282c34;
-  padding: 20px 0 10vh 0;
-  border-bottom: solid rgb(32, 121, 199) 30px;
+  background-color: #009cff;
+  border-right: solid #00458b 50px;
+  transform: rotateZ(20deg);
   z-index: -1;
 }
 
-.about-btn, .portfolio-btn, .contact-btn {
-  padding: 20px;
-  width: 100%;
-  position: relative;
-  background-repeat: no-repeat;
-  /* -webkit-transition: background-size 0.5s ease !important;
-  -moz-transition: background-size 0.5s ease !important;
-  -o-transition: background-size 0.5s ease !important;
-  transition: background-size 0.5s ease !important; */
-}
-
-.about-btn {
-  background: linear-gradient(rgba(32, 121, 199,0) 50%, rgba(32, 121, 199, 1)), url("./assets/profile_image_transparent.png");
-  background-size: cover;
-  background-position: top;
-}
-
-.landing-container {
-  position: relative;
-  min-height: 70vh;
-  top: calc(-10vh - 30px);
-}
-
-.landing-about {
-  min-height: 20vh;
-  overflow: hidden;
-}
-
-.landing-btn-text {
-  font-size: 32pt;
-  color: black;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-
-.landing-spacing {
-  padding: 10px;
+.landing-text {
+  color: white;
+  position: fixed;
+  left: 50px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .landing-button {
-  background-color: rgb(32, 121, 199);
-  display: flex;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.25rem;
-  box-shadow: 5px 5px 5px 5px grey;
+  font-family: "Roboto";
+  font-size: 20pt;
+  background-color: #009cff;
+  border: 4px solid white;
+  border-radius: 0.4rem;
+}
+
+.landing-button:hover {
+  border: 4px solid lightgray;
+}
+
+@media (max-width: 636px) {
+  .landing-blue {
+    transform: rotateZ(0deg);
+    left: 0;
+  }
+  .landing-text {
+    padding-right: 50px;
+  }
+  .landing-img {
+    display: none;
+  }
 }
